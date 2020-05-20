@@ -1,0 +1,118 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial;
+}
+/* CABEÇALHO */
+/* estrutura cabeçalho */
+.conteinerCabecalho{
+    background-color:slategray;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+}
+.conteinerCabecalhomini{
+    display: flex;
+    background-color: darkgray;
+    width: 1900px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+ 
+}
+.logo{
+    width: 150px;
+    height: 70px;
+    margin-top: 10px;
+    float: left;
+}
+/* menu */
+.conteinerMenu{
+    width: 800px;
+    height: 60px;
+    margin-left: 30px;
+    float: left;
+}
+.itemMenu{
+    width: 120px;
+    height: 45px;
+    float: left;
+    background-color: slategray;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 30px;
+    text-align: center;
+    font-family: Arial;
+    color: white;
+    display: block;
+    padding-top: 10px;
+}
+.itemMenu:hover{
+    background-color: darkgray;
+    color: black;
+    cursor: pointer;
+    transition: 1s;
+    display: block;
+}
+/* login */
+.conteinerForm{
+    width: 600px;
+    height: 60px;
+    float: left;
+  
+}
+.inputs{
+    width: 200px;
+    height: 25px;
+    float: left;
+}
+.usuario{
+    float: left;
+}
+.senha{
+    float: left;
+    margin-left: 20px;
+}
+.btnOk{
+    width: 40px;
+    height: 30px;
+    float: left;
+    border-radius: 10px;
+    margin-left: 25px;
+    margin-top: 17px;
+}
+/* conteudo  */
+.conteinerGG{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    height: inherit;
+}
+.imgFundo1{
+    width: 100%;
+    height: 800px;
+    backface-visibility: visible;
+    background-attachment: fixed;
+    background-repeat: no-repeat ;
+    background-size: contain;
+    margin-top: 10px;
+    background-image: url(./images/fundo.png);
+}
+ .conteudo{
+    width: 95%;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: khaki;}
+.imgFundo2{
+    width: 100%;
+    height: 1000px;
+    margin-top: 10px;
+    backface-visibility: visible;
+    background-attachment: local;
+    background-repeat: no-repeat ;
+    background-size: contain;
+    background-image: url(./images/fundo2.jpg);
+} 
