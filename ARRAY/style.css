@@ -1,0 +1,21 @@
+*{
+    background-color: rgb(7, 7, 77);
+    color: rgb(197, 133, 133);
+    font-weight: 800;
+    font-family: monospace;
+}
+fieldset{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto ;
+}
+legend{
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+    font-size: 40px;
+}
+li{
+    font-size: larger;
+}

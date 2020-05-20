@@ -1,0 +1,282 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* CLASSES GLOBAIS */
+h1{
+    font-family: monospace;
+    /* Ao invez de usar px que pode deixar a letra
+     incompativel com o tipo de dispositivo usado, 
+     usar a unidade==> em   . ASSIM TENDO RESPONSIVIDADE 
+     Em realação a letras ==> 10px == 1em   */
+    font-size: 2em;
+    color: deeppink;
+    width: 100%;
+    font-weight: bold;
+    height: 80px;
+    /* deixar o titulo no canto esquerdo, com espaçamento em cima e embaixo  */
+    text-align: left;
+    box-sizing: border-box;
+    padding-top:20px;
+    margin-bottom: 10px;
+}
+p{
+    font-family: Arial;
+    font-size: 1.0em;
+    line-height: 1.5;
+    width: 90%;
+    height: auto;
+    min-height: 10px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+        /* CLASSE PARA FAZER O CONTEUDO CRESCRES AUTOMATICAMENTE */
+.heightAuto{
+    min-height: 100px;
+    height: auto;
+    overflow: hidden;
+}
+        /* classe para centralizar os conteudos */
+.center{
+    margin-left: auto;
+    margin-right: auto;
+}
+/* mediaQuery--DISPOITIVOS DESKTOP 1300px*/
+@media screen and (min-device-width:1300px){
+    .conteinerCenter{
+        width: 1300px;
+        height: inherit;
+    }
+/* CABAÇALHO */
+header{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+}
+.logo{
+    width: 150px;
+    height: inherit;
+    background-color: azure;
+    margin-right: 50px;
+    float: left;
+}
+.conteinerMenu{
+    width: 800px;
+    height: inherit;
+    float: left;
+
+}
+.menu{
+    width: inherit;
+    height: inherit;
+    color: azure;
+}
+.menu li{
+    list-style: none;
+    width: 120px;
+    height: inherit;
+    float: left;
+    font-family: arial;
+    font-size: 1.4em;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 20px;
+
+}
+.menu li:hover{
+    background-color: deeppink;
+    cursor: pointer;
+}
+/* CONTEUDO */
+#content{
+    width: 1300px;
+}
+#empresa, #sevicos, #localizacao{
+    width: 90%;
+    box-sizing: border-box;
+    padding-bottom: 20px;
+}
+/* EMPRESA */
+.conteudoEmpresa{
+    width: 250px;
+    height: 250px;
+    float: left;
+    margin-right: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: darkblue;
+}
+/* serviços */
+#servicoTexto{  
+    width: 800px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-right: 50px;
+    float: left; 
+}
+#servicoImg{
+    width: 300px;
+    height: 300px;
+    box-sizing: border-box;
+    float: left;
+    background-color: darkblue;
+}
+/* localização */
+#localizacaoTextoleft{
+    width: 400px;
+    padding: 10px;
+    box-sizing: border-box;
+    float: left;
+    background-color: darkcyan;
+}
+.localizacaoimg{
+    width: 300px;
+    height: 300px;
+    float: left;
+    padding: 10px;
+    background-color: darkcyan;
+
+}
+.localizacaoTextoright{
+    width: 100%;
+    margin-right: 0px;
+}
+footer{
+    background-color: black;
+}
+#conteinerMenuMobile{
+    display: none;
+}
+}
+/* mediaQuery--DISPOSITIVOS MOBILE */
+@media screen and (max-device-width:780px){
+    h1{
+        text-align: center;
+    }
+    p{
+        text-align: center;
+    }
+    .conteinerCenter{
+        width: 100%;
+        height: inherit;
+    }
+    header{
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        position: fixed;
+    }
+    .logo{
+        width: 150px;
+        height: inherit;
+        background-color: rgb(139, 0, 139);;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    /* desabilita menu desktop */
+    .conteinerMenu{
+        display: none;
+    }
+
+    /* CONTEUDO */
+    #content{
+        width: 100%;
+        padding-top: 100px;
+        box-sizing: border-box;
+    }
+    #empresa, #sevicos, #localizacao{
+        width: 90%;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+    }
+    /* EMPRESA */
+    .conteudoEmpresa{
+        width: 80%;
+        height: 250px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: rgb(162, 0, 255);
+    }
+    /* serviços */
+    #servicoTexto{  
+        width: 90%;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-bottom: 50px; 
+    }
+    #servicoImg{
+        width: 300px;
+        height: 300px;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: rgb(162, 0, 255);
+    }
+    /* localização */
+    #localizacaoTextoleft{
+        width: 90%px;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        background-color: rgb(162, 0, 255);;
+    }
+    .localizacaoimg{
+        width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+        height: 300px;
+        padding: 10px;
+        background-color: rgb(162, 0, 255);;
+    
+    }
+    .localizacaoTextoright{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 10px;
+    }
+    footer{
+        background-color: black;
+        width: 100%;
+        height: 20px;
+    } 
+    #conteinerMenuMobile{
+        width: 100px;
+        height: inherit;
+        position: fixed;
+        
+    }
+    #iconeMenu{
+        width: 90px;
+        height: 90px; 
+        margin-left: auto;
+        margin-top: 5px;;
+        background-image: url(../Responsividade/imgs/menu.png);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    #menuMobile{
+        width: 100%;
+        height: 100%;
+        background-color:rgba(162, 0, 255, 0.842);
+        position: fixed;
+        z-index: 999;
+        display: none;
+    }
+    .itemMenu{
+        width: 100%;
+        height: 150px;
+        text-align: center;
+        color: white;
+        list-style: none;
+        font-size: 60px;
+    }
+}
