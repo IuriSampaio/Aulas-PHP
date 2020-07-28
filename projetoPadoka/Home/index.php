@@ -1,180 +1,93 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Padoka</title>
-</head>
-    <link rel="stylesheet" href="./style.css">
-    <script src="./jquery.js"></script>
-    <script src="./main.js"></script>
-<body>
-    <!-- Cabeçalho -->
-    <header class="conteinerCabecalho">
-        <div class="conteinerCabecalhomini">
-            <figure class="logo"><img src="../logo.png" alt="Panificadora Alfa"></figure>
-            <!-- Menu -->
-        <div class="conteinerMenu">
-            <div class="itemMenu"><a href="../Home/index.php">HOME</a></div>
-            <div class="itemMenu"><a href="../Pagina2/index2.php">QUEM</a></div>
-            <div class="itemMenu">HOME</div>
-            <div class="itemMenu">HOME</div>
-        </div>
-            <!-- login -->
-        <div class="conteinerForm">
-            <form action="index.html" method="post" class="form">
-               <div class="usuario"> Usuario:<br> <input type="text" name="usuario" class="inputs"></div>
-                <div class="senha">Senha:<br> <input type="password" name="senha" class="inputs"></div>
-                <div class="btnok"><input type="submit" value="Ok" class="btnOk"></div>
-            </form>
-        </div>
-        </div>  
-    </header>
-    <!-- HOME -->
-    <div class="conteinerGG">
-        <div class="conteinerG">
-            <!-- LADO -->
-            <div class="ladoEsquedo"></div>
-            <!-- CONTEUDO -->
-            <div class="conteudoGG">   
-                <div class="slide">
-                   <div class="slide_nav">
-                       <div class="slide_nav_item b"> >> </div>
-                       <div class="slide_nav_item g"> << </div>
+<?php
+        require_once('../header.php');
+?>
+<link rel="stylesheet" href="./style/style.css">
+        <!-- HOME -->
+        <div class="conteinerGG">
+            <div class="conteinerG">
+                <!-- LADO -->
+                <div class="ladoEsquedo"></div>
+                <!-- CONTEUDO -->
+                <div class="conteudoGG">   
+                    <figure class="subtituto"></figure>
+                    <div class="slide">            
+                    <div class="slide_nav">
+                        <div class="slide_nav_item b"> >> </div>
+                        <div class="slide_nav_item g"> << </div>
+                        </div>
+                        <?php
+                        for($i=1;$i<=4;$i++) :
+                            $slide=str_pad($i,2,0,STR_PAD_LEFT);
+                            $primeiro=($i==1 ? 'primeiro':'');
+                            
+                        ?>
+                        <article class="slide_item <?= $primeiro; ?>">
+                            <img src="images/<?=$slide;?>.jpg" alt="[slide<?=$slide?>]" title="slide<?=$slide?>">
+                        </article>
+                        <?php endfor; ?>
                     </div>
-                    <?php
-                    for($i=1;$i<=4;$i++) :
-                        $slide=str_pad($i,2,0,STR_PAD_LEFT);
-                        $primeiro=($i==1 ? 'primeiro':'');
-                        
-                    ?>
-                    <article class="slide_item <?= $primeiro; ?>">
-                        <img src="images/<?=$slide;?>.jpg" alt="[slide<?=$slide?>]" title="slide<?=$slide?>">
-                    </article>
-                    <?php endfor; ?>
+                    <!-- PRODUTOS -->
+                    <div class="produtosGG">
+                        <div class="produtosG">
+                            <div class="paginas">
+                                <form action="index.php" method="post">
+                                   <input type="submit" class="prod pags" name="produtos" value="produtos" >
+                                   
+                                    <input type="submit" class="prod pags" name="prodMes" value="Produtos do Mês">
+                               
+                                    <input type="submit" class="prod pags" name="promocoes" value="Promoções">
+                                </form>
+                            </div>
+                            <div class="produtao">
+                                <?php
+                                    if (isset($_POST['produtos'])){
+                                        require_once('./produtos.php');
+                                    }
+                                    else if(isset($_POST['prodMes'])){
+                                        require_once('./prodMes.php');
+                                    }
+                                    else if(isset($_POST['promocoes'])){
+                                        require_once('./promocoes.php');
+                                    }else{
+                                        require_once('./produtos.php');
+                                    }
+                                  
+                                ?>
+                            </div>
+                        </div>
+                        <!-- RODAPÉ -->
+                
+                    </div>    
                 </div>
-                <!-- PRODUTOS -->
-                <div class="produtosGG">
-                    <div class="produtosG">
-                        <div class="paginas">
-                          <div class="pags">Pagina</div>
-                          <div class="pags">Pagina</div>
-                          <div class="pags">Pagina</div>
-                        </div>
-                        <div class="produtos">
-                            <table>
-                                <tr>
-                                    <td>
-                                        <figure class="foto"></figure>
-                                        <div class="descrisaoProduto">
-                                            <span>nome:##</span><br>
-                                            <span>Descrisao:@</span><br>
-                                            <span>UR$199,00</span>
-                                        </div>
-                                        <input type="submit" value="Detalhes" class="detalhes">
-                                    </td>
-                                    <td>
-                                        <figure class="foto"></figure>
-                                        <div class="descrisaoProduto">
-                                            <span>nome:#</span><br>
-                                            <span>Descrisao:</span><br>
-                                            <span>UR$199,00</span>
-                                        </div>
-                                        <input type="submit" value="Detalhes" class="detalhes">
-                                    </td>
-                                    <td>
-                                        <figure class="foto"></figure>
-                                        <div class="descrisaoProduto">
-                                            <span>nome:##</span><br>
-                                            <span>Descrisao:@@</span><br>
-                                            <span>UR$199,00</span>
-                                        </div>
-                                        <input type="submit" value="Detalhes" class="detalhes">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <figure class="foto"></figure>
-                                        <div class="descrisaoProduto">
-                                            <span>nome:##</span><br>
-                                            <span>Descrisao:@@</span><br>
-                                            <span>UR$199,00</span>
-                                        </div>
-                                        <input type="submit" value="Detalhes" class="detalhes">
-                                    </td>
-                                    <td>
-                                        <figure class="foto"></figure>
-                                        <div class="descrisaoProduto">
-                                            <span>nome:##</span><br>
-                                            <span>Descrisao:@@</span><br>
-                                            <span>UR$199,00</span>
-                                        </div>
-                                        <input type="submit" value="Detalhes" class="detalhes">
-                                    </td>
-                                    <td>
-                                        <figure class="foto"></figure>
-                                        <div class="descrisaoProduto">
-                                            <span>nome:##</span><br>
-                                            <span>Descrisao:@@</span><br>
-                                            <span>UR$199,00</span>
-                                        </div>
-                                        <input type="submit" value="Detalhes" class="detalhes">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <figure class="foto"></figure>
-                                        <div class="descrisaoProduto">
-                                            <span>nome:##</span><br>
-                                            <span>Descrisao:@@</span><br>
-                                            <span>UR$199,00</span>
-                                        </div>
-                                        <input type="submit" value="Detalhes" class="detalhes">
-                                    </td>
-                                    <td> 
-                                        <figure class="foto"></figure>
-                                        <div class="descrisaoProduto">
-                                            <span>nome:##</span><br>
-                                            <span>Descrisao:@@</span><br>
-                                            <span>UR$199,00</span>
-                                        </div>
-                                        <input type="submit" value="Detalhes" class="detalhes"></td>
-                                    <td>
-                                        <figure class="foto"></figure>
-                                        <div class="descrisaoProduto">
-                                            <span>nome:##</span><br>
-                                            <span>Descrisao:@@</span><br>
-                                            <span>UR$199,00</span>
-                                        </div>
-                                        <input type="submit" value="Detalhes" class="detalhes">
-                                    </td>
-                                </tr>
-                            </table>    
-                        </div>
-                    </div>
-                      <!-- RODAPÉ -->
-                <footer class="rodape">
-                    <input type="button" value="Sistema Interno" class="sistema">
-                    <span class="endereco">
-                        endereço:xxxxxxx xxxxxxxxxxxxxx xxxxxxxxx  n°xxxx
-                    </span>
-                    <div class="appGG">
-                        <figure class="app"></figure>
-                        <input type="button" value="Baixe Nosso App" class="appbtn">
-                    </div>
-                </footer>
-                </div>    
-            </div>
-            <!-- LADO -->
-            <div class="ladoDireito">
-                    <div class="imglateral"></div>
-                    <div class="imglateral"></div>
-                    <div class="imglateral"></div>     
-            </div>
-        </div> 
-         
-    </div>
+                <!-- LADO -->
+                <div class="ladoDireito">
+                        <figure class="imglateral"><img src="./images/redesocial1.png" title="facebook"></figure>
+                        <figure class="imglateral1"><img src="./images/redesocial2.png" title="instagram"></figure>
+                        <figue class="imglateral2"><img src="./images/redesocial3.png" title="whatsApp"></figue>     
+                </div>
+            </div> 
+        
+            
+        </div>
+       
+    <script src="JS/jquery.js"></script>
+    <script src="JS/main.js">
+    </script>
+    <script>
+        // o $ significa a abraveiação de JQuerry
+        $(document).ready(function(){
+        //todos os codigos tem que estar aqui dentro(ex: tipo o main() do java)
+            $('#iconeMenu').click(function(){
+                // função para click no icone de menu 
+                $('#menuMoba').fadeToggle(1000)
+            }); 
+            // função que faz o menu subir ao clicar non itemn do menu 
+            $('.itemMenu').click(function(){
+                $('#menuMoba').fadeOut()
+            })
+        });
+    </script>
     
-   
-    
-</body>
-</html>
+<?php
+        require_once('../footer.php');
+?>

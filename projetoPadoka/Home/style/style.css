@@ -1,0 +1,658 @@
+/* GLOBAIS */
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial;
+}
+body{
+    background-image: url('../images/cafeFundo.jpg');
+}
+:root{
+    --bg-principal:#23232e;
+    --bg-segundario:#101010;
+    --detalhes:blueviolet;
+    --txt-principal:aliceblue;
+}
+body::-webkit-scrollbar{
+    width: 30px;
+}
+body::-webkit-scrollbar-track{
+    background: var(--bg-segundario);
+}
+body::-webkit-scrollbar-thumb{
+    background: var(--detalhes);
+}
+
+/* CABEÇALHO */
+/* estrutura cabeçalho */
+.conteinerCabecalho{
+    background-color:#23232e;
+    width: 100%;
+    height: 100px;
+    position: fixed;
+}
+.conteinerCabecalhomini{
+    display: flex;
+    background-color: #23232e;
+    width: 100%;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.aparece{
+    display: block;
+}
+.some{
+    display: none;
+}
+/* CONTEUDO */
+/* estrutura conteudo */
+.conteinerGG{
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+@media screen and (max-device-width:780px){
+.imgProduto{
+    width: 85%;
+    border: solid black 2px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    height: 30vh;
+    margin-top: 40px;
+}
+/* menu MOBILE */
+#produtosDesk, .conteinerMenuDesk,
+.form, .btnOk, .inputs,.slide{
+    display: none;
+}
+.subtituto{
+    width: 100%;
+    margin-top: 100px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../images/03.jpg);
+    border-radius: 20px;
+}
+.paginas{
+    float: left;
+    width:100%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--bg-principal);
+    color: var(--txt-principal);
+    height: auto;
+    min-height: auto;
+}
+.pags{
+    width: 100%;
+    height: auto;
+    min-height: 100px;
+    margin-bottom: 5px;
+    padding: 1%;
+    float: right;
+    font-weight: 200;
+    font-size: 40px;
+    color: aliceblue;
+    background-color: var(--bg-principal);
+    text-align: center;
+    display: block;
+}   
+.conteinerMenuMoba{
+    width: 100%;
+    height: inherit;
+    position: fixed;
+    
+}
+#iconeMenu{
+    width: 90px;
+    height: 90px;
+    float: left;
+    margin-top: 5px;
+    background-image: url(../images/menu.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#menuMoba{
+    width: 100%;
+    margin-top: 100px;
+    height: 100%;
+    background-color:rgba(162, 0, 255, 0.842);
+    position: fixed;
+    z-index: 0  ;
+    display: none;
+}
+
+.itemMenu{
+    width: 100%;
+    margin-top: 20px;
+    font-weight: bolder;
+    height: 150px;
+    text-align: center;
+    color: white;
+    list-style: none;
+    font-size: 50px;
+}
+
+.logo{
+    width: 190px;
+    height: 90px;
+    float: left;
+    margin-top: 5px;
+    /* background-image: url(../logo.png); */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: center;
+}
+.conteinerCabecalhomini{
+    text-align: center;
+}
+
+
+.conteinerG{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+}
+.ladoEsquerdo, .ladoDireito{
+    width: 5%;
+    height: auto;
+    float: left;
+}
+.conteudoGG{
+    width: 92%;
+    height: auto;
+    float: left;
+    margin-left: 4%;
+    margin-top: 4%;
+}
+.tituloProduro, .nomeProduto, .preco, .numeroVendas, .descrisaoProduto{
+    font-size: 40px;
+    margin-top: 20px;
+    color: var(--txt-principal);
+}
+.preco{
+    font-size: 30px;
+}
+.numeroVendas{
+    font-size: 25px;
+}
+.descrisaoProduto{
+    font-size: 20px;
+}
+.btnComprar{
+    width: 290px;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 60px;
+    font-size: xx-large;
+    border: solid 3px rgb(0, 0, 0);
+    box-shadow: 2px 2px 10px black;
+    font-family: -webkit-pictograph;
+    background-color: var(--bg-principal);
+
+}
+span{
+    font-size: 30px;
+}
+.produto{
+    width: 100%;
+   
+    margin-top: 80px;
+}
+/* produtos */
+.produtosGG{
+    width: 100%;
+    height: auto;
+    /* position: fixed; */
+}
+.produtosG{
+    width: 99.39%;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    height: auto;
+    /* border: solid 2px black; */
+    float: left;
+    text-align: center;
+}
+
+#produtosMoba{
+  
+    margin-left: auto;
+    float: center;
+    margin-right: auto;
+}
+td{
+    max-width:100%;
+    background-color: rgba(0,0,0,0.450);
+    box-shadow: 1px 1px 2px rgba(162, 0, 255, 0.842);
+    min-width: auto;
+    font-size: 25px;
+    padding: 10px;
+    max-height: 800px;
+    min-height: auto;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.foto{
+    width: 400px;
+    height: 500px;
+    margin-left: auto;
+    margin-bottom: 10px;
+    margin-right: auto;
+    border: var(--bg-segundario) 2px solid;
+}
+.detalhes{
+    float: right;
+    margin-left: 50%;
+    margin-right: 10%;
+    width: 33vw;
+    height: 5vh;
+    margin-bottom: 1vh;
+    font-size: 25px;
+    margin-top: 1vh;
+    background-color: var(--detalhes);
+    color: var(--txt-principal);
+}
+.rodape{
+   width: 100%;
+   height: auto; 
+   background-color: var(--bg-principal);
+   float: left;
+   color:var(--txt-principal) ;
+}
+.sistema{
+    float: left;
+    margin-left: 3vw;
+    margin-top: 3vh;
+    width: 150px;
+    margin-bottom: 20px;
+    height: 50px;
+}
+.appGG{
+    float: right;
+}
+.appbtn{
+    margin-right: 60px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    height: 50px;
+    width: 150px;
+}
+.endereco{
+    margin-left: auto;
+    margin-right: auto;
+}
+img{
+    max-width: 100%;
+    vertical-align: middle;
+    /* background-attachment: fixed; */
+    background-size: contain;
+}
+ .slide_item{
+    display: none;
+}
+
+.produtosBottom, .promocoesBottom, .produtoMesBottom{
+    float: left;
+}
+}
+@media screen and (min-device-width:780px){
+.logo{
+    width: 150px;
+    height: 70px;
+    margin-top: 10px;
+    float: left;
+}
+/* menu DESKTOP */
+.conteinerMenuMoba, #produtosMoba,.menuBottom{
+    display: none;
+}
+.conteinerMenuDesk{
+    width: 800px;
+    height: 60px;
+    margin-left: 30px;
+    float: left;
+}
+.itemMenu{
+    width: 120px;
+    height: 45px;
+    float: left;
+    background-color: #23232e;
+    border-radius: 10px;
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+    font-family: Arial;
+    color: white;
+    display: block;
+    padding-top: 10px;
+}
+.itemMenu:hover{
+    background-color: darkgray;
+    color: black;
+    cursor: pointer;
+    transition: 1s;
+    display: block;
+    height: 50px; 
+    width: 150px;
+    font-size: x-large;
+}
+.title{
+    text-align: center;
+    width: 100%;
+    height: 40px;
+}
+/* login */
+.conteinerForm{
+    width: 600px;
+    height: 60px;
+    float: left;
+}
+.inputs{
+    width: 200px;
+    height: 25px;
+    float: left;
+}
+.usuario{
+    float: left;
+}
+.senha{
+    float: left;
+    margin-left: 20px;
+}
+.btnOk{
+    width: 40px;
+    height: 30px;
+    float: left;
+    border-radius: 10px;
+    margin-left: 25px;
+    margin-top: 17px;
+}
+    /* slider */
+img{
+    max-width: 100%;
+    vertical-align: middle;
+    background-attachment: fixed;
+    background-size: contain;
+}
+.slide{
+    float: left;
+    width: 100%;
+    margin-top: 3px;
+    margin-bottom: 1px;
+    position: relative;
+}
+.slide_nav{
+    position: absolute;
+    left: 0;
+    top:50%;
+    margin-top: -50px;
+    width: 100%;
+}
+.slide_nav_item{
+    position: absolute;
+    padding: 15px 20px;
+    background: var(--bg-principal);
+    color: var(--detalhes);
+    z-index: 99;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: monospace;
+}
+.slide_item{
+    display: none;
+}
+.slide_nav_item:hover{
+    background-color: var(--detalhes) ;
+    color:var(--bg-principal);
+    cursor: pointer;
+    transform: rotate(360);
+    transition: 1000ms;
+}
+.slide_nav_item.g{
+    left: 10px;
+}
+.slide_nav_item.b{
+    right: 10px;
+}
+.slide_item.primeiro{
+    display: block;
+}
+/* conteudo */
+.conteinerG{
+    width: 1500px;
+    height: auto;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+}
+.ladoEsquerdo .ladoDireito{
+    width: 300px;
+    height: auto;
+    float: left;
+}
+.conteudoGG{
+    width: 1500px;
+    height: auto;
+    float: left;
+    margin-left: 100px;;
+    margin-top: 100px;
+}
+.mostrafotos{
+    width: 100%;
+    height: 500px;
+    float: left;
+}
+.imglateral>img, .imglateral1>img, .imglateral2>img{
+    width: 100px;
+    height: 100px;
+    float: right;
+}
+
+/* produtos */
+.produtosGG{
+    width: 100%;
+    height: auto;
+    /* position: fixed; */
+}
+.produtosG{
+    width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    min-height: 1100px;
+    border: solid 2px black;
+    margin-top: 506px;
+    margin-left: 0px;
+}
+.paginas{
+    float: left;
+    width: 400px;
+    background-color: var(--bg-segundario);
+    color: var(--txt-principal);
+    height: auto;
+    min-height: inherit;
+}
+.produtos{
+    width: 1100px;
+    float: right;
+    height: auto;
+    min-height: inherit;
+    background-color: var(--bg-principal);
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+}
+.pags{
+    width: 100%;
+    height: auto;
+    min-height: 30px;
+    margin-bottom: 5px;
+    padding: 20px;
+    color: aliceblue;
+    background-color: var(--bg-segundario);
+    text-align: center;
+    display: block;
+}
+.pags:hover{
+    opacity: 5;
+    transition: 1s;
+    font-size: x-large;
+    color: var(--detalhes);
+    background-color: var(--bg-principal);
+    display: -moz-inline-stack;
+    cursor:pointer;
+}
+table{
+    width: inherit;
+    max-width: 1100px;
+    height: auto;
+    border: var(--bg-principal) 10px solid;
+    min-height: 300px;
+    margin-top: 50px;
+}
+tr{
+    width: auto;
+    max-width: 1100px;
+    min-width: 50px;
+    height: 340px;
+}
+td{
+    width:90px;
+    border: var(--bg-principal) 20px solid;
+    height: auto;
+    min-height: 300px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+}
+.foto{
+    width: 150px;
+    height: 150px;
+    margin-top: -20px;
+    margin-left: 80px;
+    margin-bottom: 10px;
+    border: var(--bg-segundario) 2px solid;
+}
+.detalhes{
+    float: right;
+    width: 130px;
+    margin-bottom: -20px;
+    height: 30px;
+    background-color: var(--detalhes);
+    color: var(--txt-principal);
+    margin-right: 10px;;
+}
+.rodape{
+   width: 100%;
+   height: 200px; 
+   background-color: var(--bg-principal);
+   color:var(--txt-principal) ;
+}
+.sistema{
+    float: left;
+    margin-left: 60px;
+    margin-top: 50px;
+    width: 200px;
+    height: 70px;
+}
+.appGG{
+    float: right;
+}
+.appbtn{
+    margin-right: 60px;
+    margin-top: 50px;
+    height: 70px;
+    width: 190px;
+}
+.endereco{
+    margin-left: 350px;
+    margin-bottom: 170px;
+}
+.ladoDireito{
+    width: 200px;
+    float: right;
+    
+}
+.produtoMes{
+    width: 100%;
+    height: 1100px;
+    background-color: var(--bg-principal);
+}
+.produto{
+    width: 73%;
+    float: right;
+    height: auto;
+}
+.imgProduto{
+    width: 600px;
+    height: 600px;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid var(--bg-segundario);
+}
+.descrisaoProduto{
+    width: 100%;
+    margin-top: 30px;
+    height: auto;
+    text-align: center;
+}
+.nomeProduto{
+    font-size: 50px;
+}
+.preco{
+    font-size: x-large;
+}
+.numeroVendas{
+    font-size: xx-large;
+}
+.btnComprar{
+       width: 290px;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: 60px;
+    font-size: xx-large;
+    border: solid 3px rgb(0, 0, 0);
+    box-shadow: 2px 2px 10px black;
+    font-family: -webkit-pictograph;
+    background-color: var(--bg-principal);
+}
+.tituloProduro{
+    width: 100%;
+    height: 50px;
+    padding-top: 10px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: var(--bg-segundario);
+    color: var(--detalhes);
+    border-radius: 30px;
+}
+}
